@@ -8,7 +8,7 @@ targets = ["x86_64-unknown-linux-gnu"]
 
 [dependencies]
 frame-system = { workspace = true, default-features = false }
-avail-core = { workspace = true, default-features = false, features = ["runtime"]}
+avail-core = { workspace = true, default-features = false, features = ["runtime"] }
 avail-base = { workspace = true, default-features = false }
 patricia-merkle-trie = { workspace = true, default-features = false }
 
@@ -33,14 +33,17 @@ trie-db.workspace = true
 rlp.workspace = true
 primitive-types.workspace = true
 ethabi.workspace = true
-
-
+helios-common.workspace = true
+helios-consensus-core.workspace = true
+alloy-primitives.workspace = true
+ssz-rs.workspace = true
+serde_cbor.workspace = true
 [dev-dependencies]
 pallet-balances = { workspace = true, default-features = false, features = ["std"] }
 pallet-timestamp = { workspace = true, default-features = false }
 
 [features]
-default = [ "std" ]
+default = ["std"]
 std = [
 	"avail-base/std",
 	"avail-core/std",
